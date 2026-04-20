@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Formulario Profesional</title>
+</head>
+<body>
+
+    <header style="background-color: rgb(156, 156, 156); padding: 10px; text-align: left;">
+        <h1>Contacto</h1>
+        <p>Uso de la etiqueta Imput.</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="formulario.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="padding: 20px;">
+        <form action="#" method="post">
+            
+            <fieldset>
+                <legend>Datos de Identificación</legend>
+                
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Escriba su nombre">
+                <br><br>
+
+                <label for="password">Contraseña de usuario:</label>
+                <input type="password" id="password" name="password" placeholder="Cree una clave">
+                <br><br>
+
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" min="0" max="99" value="0">
+                <br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Información de Contacto</legend>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com">
+                <br><br>
+
+                <label for="telefono">Teléfono móvil:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="09xxxxxxxx">
+                <br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Encuesta y Archivos</legend>
+
+                <p>Género:</p>
+                <input type="radio" id="m" name="genero" value="masculino">
+                <label for="m">Masculino</label>
+                <input type="radio" id="f" name="genero" value="femenino">
+                <label for="f">Femenino</label>
+                <br><br>
+
+                <label for="color">Color preferido para su perfil:</label>
+                <input type="color" id="color" name="color" value="#FFFFFF">
+                <br><br>
+
+                <label for="archivo">Adjuntar documento de Identificación (PDF):</label>
+                <input type="file" id="archivo" name="archivo" accept=".pdf">
+                <br><br>
+
+                <label for="satisfaccion">Nivel de satisfacción (0=Malo, 5=Regular, 10=Excelente):</label><br>
+                <input type="range" id="satisfaccion" name="satisfaccion" min="0" max="10" step="1" list="marcas">
+                <datalist id="marcas">
+                    <option value="0" label="Malo"></option>
+                    <option value="5" label="Regular"></option>
+                    <option value="10" label="Excelente"></option>
+                </datalist>
+                <br><br>
+
+                <label for="fecha">Fecha de registro:</label>
+                <input type="date" id="fecha" name="fecha">
+                <br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Comentarios Finales</legend>
+                <label for="mensaje">Mensaje adicional:</label><br>
+                <textarea id="mensaje" name="mensaje" rows="5" cols="40" required placeholder="Escriba aquí su mensaje..."></textarea>
+                <br><br>
+
+                <input type="checkbox" id="terminos" name="terminos" required>
+                <label for="terminos">Acepto los términos de vinculación</label>
+                <br><br>
+            </fieldset>
+
+            <input type="hidden" name="user_id" value="654321">
+            
+            <button type="submit">Enviar Formulario</button>
+            <input type="reset" value="Borrar todo">
+        </form>
+
+        <hr>
+
+        <section>
+            <h2>Explicación de los tipos de &lt;input&gt; utilizados</h2>
+            <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
+                <thead>
+                    <tr style="background-color: #f2f2f2;">
+                        <th style="padding: 10px;">Tipo (Type)</th>
+                        <th style="padding: 10px;">Descripción y Uso Práctico</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 10px;"><strong>text</strong></td>
+                        <td style="padding: 10px;">Se usa para capturar texto simple (usado en el campo Nombre completo).</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>password</strong></td>
+                        <td style="padding: 10px;">Crea un campo donde los caracteres se enmascaran por seguridad (usado en el campo Contraseña de usuario).</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>number</strong></td>
+                        <td style="padding: 10px;">Restringe la entrada a números con límites específicos (usado en el campo Edad).</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>email</strong></td>
+                        <td style="padding: 10px;">Valida automáticamente el formato de una dirección de correo (usado en el campo Correo electrónico).</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>tel</strong></td>
+                        <td style="padding: 10px;">Diseñado para números de teléfono, optimizando teclados móviles (usado en el campo Teléfono móvil).</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>radio</strong></td>
+                        <td style="padding: 10px;">Permite seleccionar una sola opción de un grupo (usado en la selección de Género).</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>color</strong></td>
+                        <td style="padding: 10px;">Proporciona un selector de color gráfico (usado en el campo Color preferido para su perfil).</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>file</strong></td>
+                        <td style="padding: 10px;">Permite al usuario subir archivos desde su dispositivo (usado en el campo Adjuntar documento de Identificación).</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>range</strong></td>
+                        <td style="padding: 10px;">Un control deslizante visual para elegir valores de forma intuitiva (usado en el campo Nivel de satisfacción).</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>date</strong></td>
+                        <td style="padding: 10px;">Abre un calendario nativo para la selección de fechas (usado en el campo Fecha de registro).</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>checkbox</strong></td>
+                        <td style="padding: 10px;">Se usa para opciones de activación simple o selección múltiple (usado en Acepto los términos de vinculación).</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 10px;"><strong>hidden</strong></td>
+                        <td style="padding: 10px;">Envía información técnica invisible para el usuario (usado para enviar el user_id).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer style="margin-top: 20px; text-align: center;">
+        <hr>
+        <p>&copy; 2026 Mi Sitio Web - Facultad de Ingeniería. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
